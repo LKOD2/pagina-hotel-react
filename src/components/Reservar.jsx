@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from "react";
 
 const Reservar = () => {
+
     const [reservas, setReservas] = useState([]);
-    const [cont, setCont] = useState(0);
+    const [cont, setCont] = useState(() => {
+        const contador = JSON.parse(localStorage.getItem('contador'));
+        return contador !== null ? contador : 0;
+    });
     const [editingReserva, setEditingReserva] = useState(null);
     const precios = { 'Individual': 20000, 'Doble': 40000, 'Suite': 60000 };
 
     useEffect(() => {
         const storedReservas = JSON.parse(localStorage.getItem('reservas')) || [];
         setReservas(storedReservas);
-        setCont(storedReservas.length);
     }, []);
+
+    useEffect(() => {
+        localStorage.setItem('contador', JSON.stringify(cont));
+    }, [cont]);
 
     const definirFecha = () => {
         const dia = new Date();

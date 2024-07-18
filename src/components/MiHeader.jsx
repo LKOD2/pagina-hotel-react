@@ -42,9 +42,12 @@ const Header = ({ setShowLogin, handleLogout, sesionActiva }) => {
 
   useEffect(() => {
     if (sesionActiva) {
-      const btnUsuario = document.getElementById('btn-usuario');
+      const btnUsuario = document.querySelectorAll('#btn-usuario');
       if (btnUsuario) {
-        btnUsuario.innerHTML = sesionActiva;
+        btnUsuario.forEach(boton =>{
+          boton.innerHTML = sesionActiva;
+
+        })
       }
     }
   }, [sesionActiva]);
@@ -98,7 +101,7 @@ const Header = ({ setShowLogin, handleLogout, sesionActiva }) => {
             </select>
           </>
         ) : (
-          <button id="boton-login-1" className="boton-login boton-nav" type="button" onClick={mostrarLogin}>Login</button>
+          <button id="boton-login" className="boton-login btn-login-menu" type="button" onClick={mostrarLogin}>Login</button>
         )}
       </nav>
     </header>

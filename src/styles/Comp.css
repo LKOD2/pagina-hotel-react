@@ -387,7 +387,7 @@ transform: scaleX(1);
 
 
 
-/* ---------- CONTROL USUARIO ---------------- */
+/* -USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO--USUARIO- */
 
 
 .menu-usuario{
@@ -418,7 +418,7 @@ margin-top: auto;
 
 @media (width <= 1024px){
 
-.nav-menu .menu-usuario.activo{
+.nav-menu .menu-usuario{
     display: none;
 }
 
@@ -429,11 +429,11 @@ margin-top: auto;
 }
 @media (width <= 620px){
 
-.menu-usuario.activo{
+.menu-usuario{
     display: none;
 }
 
-.nav-menu .menu-usuario.activo{
+.nav-menu .menu-usuario{
     display: block;
 }
 
