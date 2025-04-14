@@ -6,9 +6,9 @@ import './styles/Clima.css';
 import Header from './components/MiHeader';
 import Footer from './components/Footer';
 import Login from './components/Login';
-import Home from './components/Home';
-import Somos from './components/Somos';
-import Contacto from "./components/Contacto";
+import Home from './pages/Home';
+import Somos from './pages/Somos';
+import Contacto from "./pages/Contacto";
 import Reservar from "./components/Reservar";
 
 function App() {
@@ -45,8 +45,9 @@ function App() {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/reservar" element={<Reservar />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
+      
     </div>
   );
 }
